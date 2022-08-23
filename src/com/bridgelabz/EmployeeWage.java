@@ -10,11 +10,14 @@ public class EmployeeWage {
 
     public static void main(String[] args) {
         System.out.println("**** Employee Wage Computation Program ****\n\n");
+        calculateEmpWage();
+    }
+
+    static void calculateEmpWage(){
 
         int empHours = 0;
         int totalWorkingHours = 0;
         int totalWorkingDays = 0;
-//        int empWage = 0;
         int totalWage = 0;
 
         while(totalWorkingHours < MAX_WORKING_HOURS && totalWorkingDays < MAX_WORKING_DAYS){
@@ -38,12 +41,8 @@ public class EmployeeWage {
             totalWorkingHours = totalWorkingHours + empHours;
             System.out.println("Days Worked = " + totalWorkingDays + " || Hours Worked = " + totalWorkingHours);
 
-//            empWage = empHours * RATE_PER_HOUR;
-//            System.out.println("Employee Wage for Day " + i + " = " + empWage);
-//            totalWage = totalWage + empWage;
         }
         totalWage = totalWorkingHours * RATE_PER_HOUR;
         System.out.println("\nEmployee Monthly Wage = " +totalWage);
     }
 }
-
