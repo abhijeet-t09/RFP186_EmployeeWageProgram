@@ -2,7 +2,8 @@ package com.bridgelabz;
 
 public class EmployeeWage {
 
-    static final int IS_PRESENT = 1;
+    static final int IS_PART_TIME = 1;
+    static final int IS_FULL_TIME = 2;
     static final int RATE_PER_HOUR = 20;
 
     public static void main(String[] args) {
@@ -11,10 +12,14 @@ public class EmployeeWage {
         int empHours = 0;
         int empWage = 0;
 
-        int checkAttendance = (int)Math.floor(Math.random() * 10) % 2;
+        int checkAttendance = (int) Math.floor(Math.random() * 10) % 3;
 
-        if(checkAttendance == IS_PRESENT) {
-            System.out.println("Employee is Present!!");
+        if (checkAttendance == IS_PART_TIME) {
+            System.out.println("Employee Works Part-time");
+            empHours = 5;
+        }
+        else if (checkAttendance == IS_FULL_TIME) {
+            System.out.println("Employee Works Full-time");
             empHours = 8;
         }
         else {
@@ -26,3 +31,4 @@ public class EmployeeWage {
         System.out.println("Employee Wage = " + empWage);
     }
 }
+
