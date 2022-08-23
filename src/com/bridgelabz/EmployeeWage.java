@@ -14,17 +14,32 @@ public class EmployeeWage {
 
         int checkAttendance = (int) Math.floor(Math.random() * 10) % 3;
 
-        if (checkAttendance == IS_PART_TIME) {
-            System.out.println("Employee Works Part-time");
-            empHours = 5;
-        }
-        else if (checkAttendance == IS_FULL_TIME) {
-            System.out.println("Employee Works Full-time");
-            empHours = 8;
-        }
-        else {
-            System.out.println("Employee is Absent!!");
-            empHours = 0;
+//        if (checkAttendance == IS_PART_TIME) {
+//            System.out.println("Employee Works Part-time");
+//            empHours = 5;
+//        }
+//        else if (checkAttendance == IS_FULL_TIME) {
+//            System.out.println("Employee Works Full-time");
+//            empHours = 8;
+//        }
+//        else {
+//            System.out.println("Employee is Absent!!");
+//            empHours = 0;
+//        }
+
+        switch (checkAttendance){
+            case IS_PART_TIME:
+                System.out.println("Employee Works Part-time");
+                empHours = 5;
+                break;
+
+            case IS_FULL_TIME:
+                System.out.println("Employee Works Full-time");
+                empHours = 8;
+                break;
+
+            default:
+                empHours = 0;
         }
 
         empWage = empHours * RATE_PER_HOUR;
